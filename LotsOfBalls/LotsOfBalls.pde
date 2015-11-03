@@ -19,8 +19,8 @@ void setup() {
   y[i] = random(diam[i]/2, height-diam[i]/2);
   velx[i] = random(-5, 5);
   vely[i] = random(-5, 5);
-  c[i]= color(random(128),random(50),random(225)); 
-  i++;
+  c[i]= color(random(60),random(250),random(225)); 
+ 
 }
 }
 
