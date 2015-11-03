@@ -1,7 +1,7 @@
 
 //declare array[j]s
 int balls = 1000;
-float[] x = new float [1000];
+float[] x = new float [balls];
 float[] y = new float [balls];
 float[] velx = new float [balls];
 float[] vely = new float [balls];
@@ -9,20 +9,18 @@ float [] diam = new float [balls];
 color [] c = new color [balls];
 
 void setup() {
-  int i = 0;                    //declare local variable 
   //set size of canvas
   size(800, 600);
 
   //initialize variables
-  while ( i<balls){
+  for (int i = 0; i<balls; i++){
   diam[i] = 30;
   x[i] = random(diam[i]/2,width-diam[i]/2);  
   y[i] = random(diam[i]/2, height-diam[i]/2);
   velx[i] = random(-5, 5);
   vely[i] = random(-5, 5);
-  c[i]= color(random(255),random(255),random(255)); 
+  c[i]= color(random(128),random(50),random(225)); 
   i++;
-  
 }
 }
 
