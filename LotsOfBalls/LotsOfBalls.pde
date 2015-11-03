@@ -13,28 +13,30 @@ void setup() {
   size(800, 600);
 
   //initialize variables
-  for (int i = 0; i<balls; i++){
-  diam[i] = 30;
-  x[i] = random(diam[i]/2,width-diam[i]/2);  
-  y[i] = random(diam[i]/2, height-diam[i]/2);
-  velx[i] = random(-5, 5);
-  vely[i] = random(-5, 5);
-  c[i]= color(random(60),random(250),random(225)); 
- 
-}
+
+  for (int i = 0; i<balls; i++) {
+    diam[i] = 30;
+    x[i] = random(diam[i]/2, width-diam[i]/2);  
+    y[i] = random(diam[i]/2, height-diam[i]/2);
+    velx[i] = random(-5, 5);
+    vely[i] = random(-5, 5);
+    c[i]= color(random(60), random(250), random(225));
+  }
 }
 
 void draw() {
   //draw background to cover previous frame
   background(0);
-  for(int j = 0; j < balls; j++) {
+  for (int j = 0; j < balls; j++) {
     //draw ball
     fill(c[j]);
     ellipse(x[j], y[j], diam[j], diam[j]);
 
+
     //add velocity to position
     x[j] += velx[j];
     y[j] += vely[j];
+
 
     //bounce ball if it hits walls
     if (x[j] + diam[j]/2 >= width) {
